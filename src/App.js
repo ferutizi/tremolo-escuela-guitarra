@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import FrequentQuestions from "./pages/FrequentQuestions";
 import Contact from "./pages/Contact";
+import WhatsappIcon from "./components/WhatsappIcon";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/frequent-questions" element={<FrequentQuestions />} />
       </Routes>
+      <WhatsappIcon />
     </main>
   );
 }
