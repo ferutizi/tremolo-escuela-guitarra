@@ -1,6 +1,7 @@
 const About = () => {
     return(
-        <></>
+        <>
+        </>
     );
 }
 

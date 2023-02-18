@@ -1,3 +1,5 @@
+import './WhatsappIcon.scss';
+
 const WhatsappIcon = () => {
     return(
         <a href="https://api.whatsapp.com/send?phone=2916468413&text=Hola, quería obtener más información sobre las clases de guitarra" target="_blank" >

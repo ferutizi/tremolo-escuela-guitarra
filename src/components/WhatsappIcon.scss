@@ -1,0 +1,26 @@
+.icon--wp{
+	position: fixed;
+    width: 4.7em;
+	bottom: 1.2em;
+	right: 1.2em;
+	filter: drop-shadow(2px 2px 3px #999);
+    z-index: 10;
+    &:hover {
+        cursor: pointer;
+        animation-duration: 0.6s;
+        animation-name: slidein;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes slidein {
+    from {
+        bottom: 1.2em;
+        rotate: 0deg;
+    }
+  
+    to {
+        bottom: 1.7em;
+        rotate: 5deg;
+    }
+  }
