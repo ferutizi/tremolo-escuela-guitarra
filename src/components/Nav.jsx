@@ -1,16 +1,19 @@
 import './Nav.scss';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
     return(
         <div className='nav'>
             <div>
-                <img className='nav--logo logo' src={require('../images/logo.png')} />
+                <Link to="/">
+                    <img className='nav--logo logo' src={require('../images/logo.png')} />
+                </Link>
             </div>
             <div className='nav--sections'>
-                <a className='nav--item'>¿Quiénes somos?</a>
-                <a className='nav--item'>Nuestros Espacios</a>
-                <a className='nav--item'>Contacto</a>
-                <a className='nav--item'>Preguntas Frecuentes</a>
+                <Link className='nav--item'>¿Quiénes somos?</Link>
+                <Link to="/locations" className='nav--item'>Nuestros Espacios</Link>
+                <Link className='nav--item'>Contacto</Link>
+                <Link className='nav--item'>Preguntas Frecuentes</Link>
             </div>
         </div>
     );
