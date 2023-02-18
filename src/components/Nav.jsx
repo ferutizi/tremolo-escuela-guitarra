@@ -1,7 +1,17 @@
+import './Nav.scss';
+
 const Nav = () => {
     return(
-        <div style={{backgroundColor: '#f5f0dd', width: '100%', height: '8em', display: 'flex', alignItems: 'center'}}>
-            <img src={require('../images/logo.png')} style={{height: '80%'}}></img>
+        <div className='nav'>
+            <div>
+                <img className='nav--logo logo' src={require('../images/logo.png')} />
+            </div>
+            <div className='nav--sections'>
+                <a className='nav--item'>¿Quiénes somos?</a>
+                <a className='nav--item'>Nuestros Espacios</a>
+                <a className='nav--item'>Contacto</a>
+                <a className='nav--item'>Preguntas Frecuentes</a>
+            </div>
         </div>
     );
 }

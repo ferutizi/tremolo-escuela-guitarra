@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #999;
+    background-color: #ddd;
 }
 
 .icon--wp{
@@ -8,7 +8,7 @@ body {
     width: 4.7em;
 	bottom: 1.2em;
 	right: 1.2em;
-	box-shadow: 2px 2px 3px #999;
+	filter: drop-shadow(2px 2px 3px #999);
     z-index: 10;
 }
 

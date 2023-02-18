@@ -1,0 +1,22 @@
+.nav {
+    background-color: #f5f0dd;
+    height: 7em;
+    display: flex;
+    align-items: center;
+    padding: 0 5em;
+    gap: 3em;
+}
+
+.nav--logo {
+    height: 6em;
+}
+
+.nav--sections {
+    display: flex;
+    gap: 2em;
+}
+
+.nav--item {
+    font-size: 1.1em;
+    cursor: pointer;
+}
