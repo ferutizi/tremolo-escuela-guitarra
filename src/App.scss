@@ -1,4 +1,26 @@
+@import './sass/variables';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+
 body {
     margin: 0;
-    background-color: #eee;
+    background-color: #f7f8fc;
+    //font-family: 'Bebas Neue', cursive;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.img {
+    width: 70em;
+    margin: 0 auto;
+    display: flex;
+    filter: hue-rotate(321deg) grayscale(0.4);
+    animation-duration: 5s;
+    animation-name: a;
+    animation-fill-mode: forwards;
+}
+
+.separate {
+    height: 2em;
+    width: 100%;
+    background-color: $color1;
 }

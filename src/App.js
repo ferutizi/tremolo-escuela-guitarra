@@ -1,9 +1,9 @@
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
-import OurLocations from "./pages/OurLocations";
+import Inscription from "./pages/Inscription";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import Gallery from "./pages/Gallery";
 import FrequentQuestions from "./pages/FrequentQuestions";
 import Contact from "./pages/Contact";
 import WhatsappIcon from "./components/WhatsappIcon";
@@ -14,8 +14,8 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/locations" element={<OurLocations />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/inscription" element={<Inscription />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/frequent-questions" element={<FrequentQuestions />} />
       </Routes>
