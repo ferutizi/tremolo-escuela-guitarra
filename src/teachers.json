@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Uziel Acuña",
+        "image": "",
+        "specialization": "",
+        "skill1": "Creador de trémolo escuela",
+        "skill2": "Estudiante del profesorado de guitarra",
+        "skill3": "Compositor",
+        "skill4": "Multi-instrumentista",
+        "skill5": "Experiencia dando clases",
+        "skill6": "Canto energético",
+        "red": "spotify",
+        "red2": "instagram",
+        "red3": "instagram-escuela"
+    },
+    {
+        "id": 2,
+        "name": "Fernando Utizi",
+        "image": "",
+        "specialization": "Técnica y composición",
+        "skill1": "Estudiante ultimo año de profesorado de guitarra",
+        "skill2": "+5 años de experiencia dando clases",
+        "skill3": "Compositor",
+        "skill4": "Productor de música",
+        "skill5": "Formación de conjuntos y dirección",
+        "skill6": "Participación muical con audiovisuales",
+        "red": "spotify",
+        "red2": "instagram",
+        "red3": "twitch"
+    }
+]

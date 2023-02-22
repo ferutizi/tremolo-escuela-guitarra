@@ -1,0 +1,40 @@
+@import '../sass/variables';
+
+.teachers--container {
+    display: flex;
+    margin: 2em 12em;
+    gap: 2em;
+    justify-content: center;
+}
+
+.teacher--card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30em;
+    background-color: white;
+    border: 1px solid $color1;
+    border-radius: 0.5em;
+    box-shadow: 3px 4px 6px #444;
+}
+.teacher--img{
+
+}
+.teacher--title{
+    font-size: 1.8em;
+}
+.teacher--subtitle{
+
+}
+.teacher--ul{
+
+}
+.teacher--skill{
+
+}
+.teacher--icons{
+
+}
+.teacher--icon{
+
+}

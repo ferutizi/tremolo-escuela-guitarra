@@ -1,9 +1,9 @@
 import './Cards.scss';
 
-const Card = () => {
+const Card = ({ text }) => {
     return(
         <div className='card'>
-            <p className='card--text'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p className='card--text'>{text}</p>
         </div>
     );
 }
