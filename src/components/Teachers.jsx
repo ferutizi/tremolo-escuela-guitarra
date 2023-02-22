@@ -9,7 +9,7 @@ const Teachers = () => {
                 <TeacherCard 
                     key={item.id}
                     name={item.name}
-                    img={item.img}
+                    img={item.image}
                     specialization={item.specialization}
                     skill1={item.skill1}
                     skill2={item.skill2}

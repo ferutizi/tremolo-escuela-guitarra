@@ -8,41 +8,52 @@
     justify-content: center;
 }
 
-.teacher--card{
+.teacher--card {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 30em;
+    grid-template-columns: 1fr 1fr;
+    width: 70em;
     background-color: white;
-    border: 1px solid $primary;
+    justify-content: start;
     border-radius: 0.5em;
     box-shadow: 3px 4px 6px $shadow;
+    gap: 1.5em;
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    &__description {
+        width: 50%;
+    }
+
+    &__img {
+        width: 50%;
+    }
 }
 
-.teacher--img{
+.teacher--img {
     width: 100%;
 }
 
-.teacher--title{
-    font-size: 1.8em;
-}
+.description-- {
+    &skill {
+        color: black;
+    }
+    &icons {
+        color: black;
+    }
+    &icon {
+        color: black;
+    }
+    &subtitle {
+        color: black;
+    }
+    &title {
+        font-size: 2em;
+        color: red;
+        font-weight: 600;
+    }  
 
-.teacher--subtitle{
-    color: black;
-}
-
-.teacher--ul{
-    color: black;
-}
-
-.teacher--skill{
-    color: black;
-}
-
-.teacher--icons{
-    color: black;
-}
-
-.teacher--icon{
-    color: black;
+    &ul {
+        color: black;
+    }
 }

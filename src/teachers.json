@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Uziel Acuña",
-        "image": "",
+        "image": "blue.png",
         "specialization": "",
         "skill1": "Creador de trémolo escuela",
         "skill2": "Estudiante del profesorado de guitarra",
@@ -17,7 +17,7 @@
     {
         "id": 2,
         "name": "Fernando Utizi",
-        "image": "",
+        "image": "violet.png",
         "specialization": "Técnica y composición",
         "skill1": "Estudiante ultimo año de profesorado de guitarra",
         "skill2": "+5 años de experiencia dando clases",
