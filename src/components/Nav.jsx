@@ -9,7 +9,6 @@ const Nav = () => {
                 <Link to="/gallery" className='nav--item'>GALERÍA</Link>
                 <Link to="/incription" className='nav--item'>INSCRIPCIONES</Link>
                 <Link to="/contact" className='nav--item'>CONTACTO</Link>
-{/*                 <Link to="/frequent-questions" className='nav--item'>Preguntas Frecuentes</Link> */}
             </div>
         </div>
     );

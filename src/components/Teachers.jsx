@@ -11,12 +11,9 @@ const Teachers = () => {
                     name={item.name}
                     img={item.image}
                     specialization={item.specialization}
-                    skill1={item.skill1}
-                    skill2={item.skill2}
-                    skill3={item.skill3}
-                    skill4={item.skill4}
-                    skill5={item.skill5}
-                    skill6={item.skill6}
+                    text1={item.text1}
+                    text2={item.text2}
+                    text3={item.text3}
                     red={item.red}
                     red2={item.red2}
                     red3={item.red3}
