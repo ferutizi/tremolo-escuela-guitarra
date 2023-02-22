@@ -1,0 +1,10 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+
+.mainstay--section {
+    background-color: $background-primary;
+}
+
+.subtitle {
+    @include subtitle;
+}

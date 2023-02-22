@@ -5,6 +5,7 @@ import teachers from "../teachers.json";
 const Teachers = () => {
     return(
         <section className="teachers--container">
+            <h2 className="subtitle">Nuestros&nbsp;<span>profesores</span></h2>
             {teachers.map(item => 
                 <TeacherCard 
                     key={item.id}
@@ -14,9 +15,14 @@ const Teachers = () => {
                     text1={item.text1}
                     text2={item.text2}
                     text3={item.text3}
-                    red={item.red}
-                    red2={item.red2}
-                    red3={item.red3}
+                    red1={item.redes[0].name}
+                    url1={item.redes[0].url}
+                    red2={item.redes[1].name}
+                    url2={item.redes[1].url}
+                    red3={item.redes[2].name}
+                    url3={item.redes[2].url}
+                    red4={item.redes[3].name}
+                    url4={item.redes[3].url}
                 />    
             )}
         </section>

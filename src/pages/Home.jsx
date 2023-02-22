@@ -7,11 +7,12 @@ const Home = () => {
         <div className='background--image'></div>
         <img src={require('../images/logo.png')} className='background--logo'></img>
         <div className='separate'></div>
-        <h1>Trémolo</h1> 
-        <h2>Escuela de Guitarra</h2>
+        <div>
+          <h1>Trémolo</h1> 
+          <h2 className='subtitle'>Escuela de&nbsp;<span>Guitarra</span></h2>
+        </div>
         <Mainstay />
-        <h3>¿Quiénes Somos?</h3>
-        <h3>Nuestros Profesores</h3>
+        <h2 className='subtitle'>¿Quiénes somos?</h2>
         <Teachers />
       </>
     );

@@ -5,22 +5,60 @@
         "image": "blue.png",
         "specialization": "",
         "text1": "Fundador de Trémolo Escuela de Guitarra, con mas de 10 años de experiencia en la docencia.",
-        "text2": "Es compositor y multi instrumentista",
-        "text3": "Como cantautor lanzó el álbum Semilla (2020)",
-        "red": "spotify",
-        "red2": "instagram",
-        "red3": "instagram-escuela"
+        "text2": "Es compositor y multi instrumentista.",
+        "text3": "Como cantautor lanzó el álbum Semilla (2020).",
+        "redes": [
+            {
+                "id": 1,
+                "name": "spotify",
+                "url": "https://open.spotify.com/album/1WOXxQxJVasM75Qgx1yj3x?si=U_bPlxv9Riq-fBt1EmOd3g&nd=1"
+            },
+            {
+                "id": 2,
+                "name": "instagram",
+                "url": "https://www.instagram.com/uziel.semilla.musica/"
+            },
+            {
+                "id": 3,
+                "name": "facebook",
+                "url": "https://www.facebook.com/uzielsemillamusica"
+            },
+            {
+                "id": 4,
+                "name": "youtube",
+                "url": "https://www.youtube.com/channel/UC5NxI83g3WVaHvMwI2sm74g"
+            }
+        ]
     },
     {
         "id": 2,
         "name": "Fernando Utizi",
         "image": "violet.png",
         "specialization": "Técnica y composición",
-        "text1": "Es docente con más de 5 años de experiencia y ha dirigido conjuntos intrumentales",
-        "text2": "Compositor y productor musical. Lanzó su álbum Éxodo (2022) bajo el nombre de Semitono",
-        "text3": "Es Creador de contenido online SemitonoEsTendencia",
-        "red": "spotify",
-        "red2": "instagram",
-        "red3": "twitch"
+        "text1": "Es docente con más de 5 años de experiencia y ha dirigido conjuntos intrumentales.",
+        "text2": "Compositor y productor musical. Lanzó su álbum Éxodo (2022) bajo el nombre de Semitono.",
+        "text3": "Es Creador de contenido online SemitonoEsTendencia.",
+        "redes": [
+            {
+                "id": 1,
+                "name": "spotify",
+                "url": "https://open.spotify.com/album/78YcelOX3QzKN1Nr0VZro1?si=sV24xSo2QfO_gmzTDch6IQ"
+            },
+            {
+                "id": 2,
+                "name": "instagram",
+                "url": "https://www.instagram.com/fernandoutizi/"
+            },
+            {
+                "id": 3,
+                "name": "facebook",
+                "url": "https://www.facebook.com/fer.utizi/"
+            },
+            {
+                "id": 4,
+                "name": "twitch",
+                "url": "https://www.twitch.tv/semitonoestendencia"
+            }
+        ]
     }
 ]

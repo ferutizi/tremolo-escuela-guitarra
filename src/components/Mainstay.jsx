@@ -1,9 +1,10 @@
+import './Mainstay.scss';
 import Cards from "./Cards";
 
 const Mainstay = () => {
     return(
-        <section className='card--section'>
-          <h3>En qué nos destacamos</h3>
+        <section className='mainstay--section'>
+          <h2 className='subtitle'>En qué nos&nbsp;<span>destacamos</span></h2>
           <Cards />
         </section>
     );
