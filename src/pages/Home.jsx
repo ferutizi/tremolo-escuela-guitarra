@@ -4,8 +4,8 @@ import Teachers from '../components/Teachers';
 const Home = () => {
     return(
       <>
-        <div className='div'>
-        </div>
+        <div className='background--image'></div>
+        <img src={require('../images/logo.png')} className='background--logo'></img>
         <div className='separate'></div>
         <div className='card--section'>
           <h1>Trémolo</h1> 
