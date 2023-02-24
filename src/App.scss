@@ -35,3 +35,17 @@ h1, h2, h3, h4 {
     top: 4em;
     right: 12em;
 }
+
+.inscription--main {
+    background-color: $background-guitar;
+    height: 100%;
+    width: 100vw;
+}
+
+.inscription--guitar__l {
+    transform: scale(1);
+}
+
+.inscription--guitar__r {
+    transform: scale(1);
+}
