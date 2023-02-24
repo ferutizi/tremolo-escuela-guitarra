@@ -40,12 +40,62 @@ h1, h2, h3, h4 {
     background-color: $background-guitar;
     height: 100%;
     width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 .inscription--guitar__l {
-    transform: scale(1);
+    width: 45%;
+    position: relative;
+    animation-name: open_l;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 .inscription--guitar__r {
-    transform: scale(1);
+    position: relative;
+    width: 45%;
+    animation-name: open_r;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes open_l {
+    from {
+        right: 0%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes open_r {
+    from {
+        right: 0%;
+    }
+
+    to {
+        right: -100%;
+    }
+}
+
+@keyframes close_l {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes close_r {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 0%;
+    }
 }
