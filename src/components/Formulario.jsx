@@ -60,7 +60,6 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
                         {hours.map(i => 
                             <option value={i.dia + " " + i.hora}>{i.dia}: {i.hora}, lugar: {i.espacio}</option>    
                         )}
-                        <option value='Lunes 17'>Lunes 17</option>
                     </select>
                     <button type="submit" className="inscription--button">Enviar Inscripción</button>
                 </div>
