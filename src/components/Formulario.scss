@@ -30,11 +30,14 @@
 }
 
 .form--first {
-    right: -9em;
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    right: -7.9em;
 }
 
 .form--second {
-    right: 8.3em;
+    right: 9.2em;
 }
 
 .form--true {
@@ -52,4 +55,18 @@
 
 .finish--true {
     opacity: 0;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
