@@ -1,27 +1,31 @@
 import useFormulario from '../hooks/useFormulario';
+import useHours from '../hooks/useHours';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Formulario.scss';
 
-const Formulario = () => {
+const Formulario = ({ submitted, setSubmitted,  }) => {
     const [active, setActive] = useState(true);
-    const [submitted, setSubmitted] = useState(false);
     const [formulario, handleChange, reset] = useFormulario();
+    const [hours] = useHours();
 
     const form = useRef();
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log('first')
+        setSubmitted(true);
         emailjs.sendForm('service_tylurvk', 'template_oy0n19c', form.current, 'BWCL7ZUqJm6x267aG')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });
-        setSubmitted(true);
         reset();
-        setSubmitted(false);
+        setTimeout(() => {
+            setSubmitted(false);
+        }, 8000);
     }
-    console.log(active)
+
     return(
         <div className="inscription--container">
             <form onSubmit={handleSubmit} ref={form} style={{display: 'flex'}}>
@@ -38,7 +42,7 @@ const Formulario = () => {
                     </select>
                     <button onClick={() => setActive(!active)} className='inscription--button' type='button'>Siguiente</button>
                 </div>
-                <div className={`inscription--form form--${!active} form--second`}>
+                <div className={`inscription--form form--${!active} form--second finish--${submitted}`}>
                     <select name="city" onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                         <option hidden label='Ciudad' />
                         <option value='Bahía Blanca'>Bahía Blanca</option>
@@ -52,6 +56,10 @@ const Formulario = () => {
                     </select>
                     <select name="hour" onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                         <option hidden label='Horario' />
+                        <option value='a definir'>A definir con el profesor</option>
+                        {hours.map(i => 
+                            <option value={i.dia + " " + i.hora}>{i.dia}: {i.hora}, lugar: {i.espacio}</option>    
+                        )}
                         <option value='Lunes 17'>Lunes 17</option>
                     </select>
                     <button type="submit" className="inscription--button">Enviar Inscripción</button>

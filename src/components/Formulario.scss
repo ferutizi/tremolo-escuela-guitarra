@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
-    min-width: 17.0625em;
+    width: 17.0625em;
 }
 
 .inscription--input {
@@ -48,4 +48,8 @@
     display: flex;
     position: relative;
     right: 1000em;
+}
+
+.finish--true {
+    opacity: 0;
 }

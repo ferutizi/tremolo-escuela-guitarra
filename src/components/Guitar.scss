@@ -27,6 +27,18 @@
     animation-fill-mode: forwards;
 }
 
+.close--true__l {
+    animation-name: close_l;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;  
+}
+
+.close--true__r {
+    animation-name: close_r;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;  
+}
+
 @keyframes open_l {
     from {
         right: 0%;
