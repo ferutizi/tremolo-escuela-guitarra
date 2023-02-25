@@ -40,5 +40,17 @@ h1, h2, h3, h4 {
     z-index: 2;
     display: flex;
     position: relative;
-    top: -65vh;
+    top: -76vh;
+}
+
+.inscription--container {
+    display: flex;
+    position: relative;
+    top: -15em;
+}
+
+.inscription--form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
