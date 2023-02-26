@@ -60,7 +60,11 @@
     }
     &icons {
         display: flex;
-        gap: 2em
+        gap: 2em;
+        :hover {
+            transition: all ease 0.25s;
+            transform: scale(1.05);
+        }
     }
     &icon {
         width: 2.5em;

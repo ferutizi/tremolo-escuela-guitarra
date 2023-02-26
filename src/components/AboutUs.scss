@@ -1,0 +1,26 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+
+.about--{
+    &subtitle {
+        @include subtitle (left, 1.8em);
+        padding: 0;
+    }
+    &container {
+        display: flex;
+        margin: 0 8em;
+        gap: 2em;
+    }
+    &button {
+        @include input;
+        width: 10em;
+        z-index: 1;
+        cursor: pointer;
+    }
+    &description {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        justify-content: space-around;
+    }
+}
