@@ -1,12 +1,13 @@
 @import '../sass/variables';
 @import '../sass/mixins';
 
-.teachers--container {
+.teachers {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
     justify-content: center;
+    padding: $section-padding;
 }
 
 .teacher--card {
