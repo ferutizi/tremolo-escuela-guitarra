@@ -35,16 +35,16 @@ const TeacherCard = ({
                     </div>
                     <div className="description--icons">
                         <a href={url1} target="_blank">
-                            <img src={require(`../images/icons/${red1}.png`)} className="description--icon" />
+                            <img src={require(`../images/icons/${red1}_c.png`)} className="description--icon" />
                         </a>
                         <a href={url2} target="_blank">
-                            <img src={require(`../images/icons/${red2}.png`)} className="description--icon" />
+                            <img src={require(`../images/icons/${red2}_c.png`)} className="description--icon" />
                         </a>
                         <a href={url3} target="_blank">
-                            <img src={require(`../images/icons/${red3}.png`)} className="description--icon" />
+                            <img src={require(`../images/icons/${red3}_c.png`)} className="description--icon" />
                         </a>
                         <a href={url4} target="_blank">
-                            <img src={require(`../images/icons/${red4}.png`)} className="description--icon" />
+                            <img src={require(`../images/icons/${red4}_c.png`)} className="description--icon" />
                         </a>
                     </div>
                 </div>

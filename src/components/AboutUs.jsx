@@ -10,7 +10,7 @@ const AboutUs = () => {
             </div>
             <div className='about--container'>
                 <div>
-                    <img className='about--img' src={require('../images/gg.jpg')} />
+                    <img className='about--img' src={require('../images/guitar_c.jpg')} />
                 </div>
                 <div className='about--description'>
                     <h3 className='about--subtitle'><span>¿</span>Quiénes Somos<span>?</span></h3>
