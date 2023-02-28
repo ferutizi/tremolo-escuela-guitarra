@@ -1,13 +1,23 @@
 import useFormulario from '../hooks/useFormulario';
 import useHours from '../hooks/useHours';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './Formulario.scss';
 
 const Formulario = ({ submitted, setSubmitted,  }) => {
     const [active, setActive] = useState(true);
-    const [formulario, handleChange, reset] = useFormulario();
+    const [formulario, handleChange, reset] = useFormulario({
+        name: '',
+        surname: '',
+        email: '',
+        phone: '',
+        agegroup: '',
+        city: '',
+        professor: '',
+        hour: ''
+    });
     const [hours] = useHours();
+    const [date, setDate] = useState(hours);
 
     const form = useRef();
     const handleSubmit = (e) => {
@@ -25,6 +35,14 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
             setSubmitted(false);
         }, 8000);
     }
+    
+    useEffect(() => {
+        if(formulario.city == 'Bahía Blanca') {
+            setDate(hours.filter(item => item.ciudad == 'Bahía Blanca'))
+        } else if(formulario.city == 'Punta Alta') {
+            setDate(hours.filter(item => item.ciudad == 'Punta Alta'))
+        }
+    }, [formulario.city])
 
     return(
         <div className="inscription--container">
@@ -34,7 +52,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
                     <input name="surname" value={formulario.value} onChange={handleChange} type="text" placeholder='Apellido' required className="inscription--input" />
                     <input name="email" value={formulario.value} onChange={handleChange} type="text" placeholder='Correo Electrónico' required className="inscription--input" />
                     <input name="phone" value={formulario.value} onChange={handleChange} type="number" placeholder='Teléfono' required className="inscription--input" />
-                    <select name="age-group" onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
+                    <select name="agegroup" onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                         <option hidden label='Grupo Etario' />
                         <option value='Niño'>Niño</option>
                         <option value='Adolescente'>Adolescente</option>
@@ -57,8 +75,8 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
                     <select name="hour" onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                         <option hidden label='Horario' />
                         <option value='a definir'>A definir con el profesor</option>
-                        {hours.map(i => 
-                            <option value={i.dia + " " + i.hora}>{i.dia}: {i.hora}, lugar: {i.espacio}</option>    
+                        {date.map(i => 
+                            <option key={i.id} value={i.dia + " " + i.hora}>{i.dia}: {i.hora}, lugar: {i.espacio}</option>    
                         )}
                     </select>
                     <button type="submit" className="inscription--button">Enviar Inscripción</button>

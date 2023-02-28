@@ -1,0 +1,22 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+
+.location-- {
+    &card {
+        background-color: #fff;
+        height: 28em;
+        margin-top: 3.5em;
+        border-radius: 6px;
+        box-shadow: 2px 2px 4px $shadow;
+    }
+    &name {
+        font-size: 1.4em;
+    }
+    &city {
+        font-size: 1em;
+        margin: 0;
+    }
+    &adress {
+        font-size: 1em;
+    }
+}
