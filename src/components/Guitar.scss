@@ -86,3 +86,81 @@
         left: 41.485%;
     }
 }
+
+// MEDIA QUERIE ANIMATIONS
+
+@media (max-width: 1310px) {
+    @keyframes open_l {
+        from {
+            left: 41.515%;
+        }
+        
+        to {
+            left: 22%;
+        }
+    }
+    @keyframes close_l {
+        from {
+            left: 22%;
+        }
+    
+        to {
+            left: 41.515%;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    @keyframes open_l {
+        from {
+            left: 41.515%;
+        }
+        
+        to {
+            left: 20%;
+        }
+    }
+    @keyframes close_l {
+        from {
+            left: 20%;
+        }
+    
+        to {
+            left: 41.515%;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    @keyframes open_l {
+        from {
+            left: 41.515%;
+        }
+        
+        to {
+            left: 16%;
+        }
+    }
+    @keyframes close_l {
+        from {
+            left: 16%;
+        }
+    
+        to {
+            left: 41.515%;
+        }
+    }
+}
+
+// MEDIA NO-ANIMATION
+
+@media (max-width: 780px) {   
+    .inscription--guitar__l {
+        animation: none;
+        display: none;
+    }
+    .inscription--guitar__r {
+        animation: none;
+        display: none;
+    }
+}

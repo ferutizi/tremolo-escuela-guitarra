@@ -70,3 +70,9 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 780px) {   
+    .form--first {
+        animation: none;
+    }
+}
