@@ -13,7 +13,7 @@ const AboutUs = () => {
                     <img className='about--img' src={require('../images/guitar_c.jpg')} />
                 </div>
                 <div className='about--description'>
-                    <h3 className='about--subtitle'><span>¿</span>Quiénes Somos<span>?</span></h3>
+                    <h3 className='about--subtitle' style={{displplay: 'flex'}}><span>¿</span>Quiénes Somos<span>?</span></h3>
                     <p className='description--text'>Somos una escuela itinerante de guitarra que funciona en Punta Alta y Bahía Blanca, está abierta a todo aquel que quiera aprender este instrumento y disfrutar de la música, cualquiera sea su nivel, a partir de los 8 años
                         hasta adultos mayores. Tenemos como objetivo llevar la enseñanza musical a diferentes espacios culturales y sociedades de fomento
                     </p>

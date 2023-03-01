@@ -59,6 +59,16 @@
         &--container {
             flex-direction: column;
         }
+        &--subtitle {
+            justify-content: center;
+            display: flex;
+        }
+        &--description {
+            align-items: center;
+        }
+    }
+    .description--text {
+        text-align: center;
     }
 }
 
