@@ -2,6 +2,15 @@
 @import '../sass/mixins';
 
 .location-- {
+    &container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5em;
+        width: 100%;
+        justify-content: center;
+        height: calc(100vh - 3em);
+        background-color: #fef2e1;
+    }
     &card {
         background-color: #fff;
         height: 28em;
@@ -9,14 +18,34 @@
         border-radius: 6px;
         box-shadow: 2px 2px 4px $shadow;
     }
+    &description {
+        margin: 0 0.8em;
+        border-top: 1px solid #eee;
+    }
     &name {
+        color: $primary;
+        text-shadow: 0px 1px 1px $black;
         font-size: 1.4em;
     }
     &city {
+        color: $black;
         font-size: 1em;
         margin: 0;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 6px;
     }
     &adress {
         font-size: 1em;
+        margin: 6px 0;
+    }
+    &phone {
+        font-size: 1em;
+        margin: 6px 0;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #eee;
+    }
+    &map {
+        border: 0;
+        border-radius: 6px;
     }
 }
