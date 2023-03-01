@@ -1,8 +1,7 @@
 @import '../sass/variables';
 
 .card--container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
     justify-items: start;
     gap: 8em;
     margin: 0;
@@ -11,12 +10,12 @@
         display: flex;
         justify-content: left;
     }
-    &__rigth {
-        margin: 1.5em 0;
+    &__right {
         display: flex;
+        gap: 3em;
         flex-direction: column;
         align-items: start;
-        justify-content: space-between;
+        justify-content: start;
     }
 }
 
@@ -39,7 +38,30 @@
         text-align: center;
         color: #fff;
         font-weight: 400;
+        padding: 1rem 0;
         margin: 0;
         text-shadow: 2px 2px 4px black;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card--container {
+        gap: 5em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card--container {
+        display: flex;
+        flex-direction: row;
+        width: 83%;
+        margin: 0 auto;
+        &__left {
+            display: none;
+        }
+        &__right {
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

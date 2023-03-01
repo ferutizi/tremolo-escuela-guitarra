@@ -13,14 +13,19 @@
     }
     &container {
         display: flex;
-        justify-content: center;
-        margin: 0 8em;
+        width: 83%;
+        max-width: 70rem;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
         gap: 2em;
         height: 20em;
     }
     &button {
         @include input;
         width: 10em;
+        transition: all 0.1s;
+        min-height: 42px;
         &:hover {
             cursor: pointer;
             color: $primary;
@@ -39,5 +44,20 @@
         border-radius: 4px;
         height: 20em;
         box-shadow: 2px 2px 4px $shadow;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about--img {
+        height: 15em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        height: 47em;
+        &--container {
+            flex-direction: column;
+        }
     }
 }

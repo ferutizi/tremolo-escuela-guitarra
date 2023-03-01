@@ -7,7 +7,7 @@ const Cards = () => {
             <div className='card--container__left'>
                 <img className='card--img' src={require('../images/red_c.jpg')} />
             </div>
-            <div className='card--container__rigth'>
+            <div className='card--container__right'>
                 <Card text={'El cuerpo como primer instrumento'} />
                 <Card text={'La búsqueda de un sonido propio en la interpretación y composición'} />
                 <Card text={'La técnica y la teoría aplicada en la música que te gusta'} />

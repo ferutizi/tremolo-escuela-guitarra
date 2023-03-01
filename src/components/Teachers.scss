@@ -13,7 +13,8 @@
 .teacher--card {
     display: flex;
     grid-template-columns: 1fr 1fr;
-    width: 70em;
+    width: 83%;
+    max-width: 70rem;
     background-color: white;
     justify-content: start;
     border-radius: 0.5em;
@@ -77,3 +78,25 @@
 .subtitle {
     @include subtitle;
 }
+
+//MEDIA QUERIES
+
+@media (max-width: 1024px) {
+    .teacher--card {
+        flex-direction: column;
+        width: 40em;
+        margin: 0;
+        &:nth-child(even) {
+            flex-direction: column;
+        }
+        &__description {
+            width: 100%;
+        }
+        &__img {
+            width: 100%;
+        }
+    }
+    .description--container {
+        width: 90%;
+    }
+} 
