@@ -6,12 +6,17 @@
     text-shadow: 0px 1px 1px $shadow;
     padding-bottom: 1em;
     span {
-        color: $primary
+        color: $primary;
     }
     @media (max-width: 600px) {
         display: block;
         text-align: center;
         justify-content: center;
+    }
+    @media (max-width: 450) {
+        span {
+            display: block;
+        }
     }
 }
 

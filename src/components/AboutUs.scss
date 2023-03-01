@@ -61,3 +61,10 @@
         }
     }
 }
+
+@media (max-width: 440px) {
+    .about--img {
+        width: 92%;
+        height: auto;
+    }
+}

@@ -42,3 +42,9 @@ h1, h2, h3, h4 {
     top: 4em;
     right: 12em;
 }
+
+@media (max-width: 550px) {
+    .background--logo {
+        right: 33vw;
+    }
+}
