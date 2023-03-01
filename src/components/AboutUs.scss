@@ -20,7 +20,12 @@
     &button {
         @include input;
         width: 10em;
-        cursor: pointer;
+        &:hover {
+            cursor: pointer;
+            color: $primary;
+            transform: scale(1.05);
+            font-weight: 600;
+        }
     }
     &description {
         display: flex;
