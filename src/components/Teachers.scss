@@ -84,7 +84,6 @@
 @media (max-width: 1024px) {
     .teacher--card {
         flex-direction: column;
-        width: 40em;
         margin: 0;
         &:nth-child(even) {
             flex-direction: column;
