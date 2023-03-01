@@ -4,8 +4,8 @@
 .inscription--container {
     z-index: 2;
     display: flex;
-    position: relative;
-    top: -76vh;
+    position: absolute;
+    top: 20%
 }
 
 .inscription--form {

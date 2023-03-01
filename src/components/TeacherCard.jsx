@@ -19,8 +19,9 @@ const TeacherCard = ({
 
     return(
         <article className="teacher--card">
-            <div className="teacher--card__img">
+            <div className="teacher--card__img" style={{position: 'relative'}}>
                 <img src={require(`../images/${img}`)} className="teacher--img" />
+                <img style={{position: 'absolute', top: '-6em', right: '0', filter: 'drop-shadow(10px -5px 10px #444)'}} src={require('../images/uzitítulo-removebg-preview.png')} />
             </div>
             <div className="teacher--card__description description">
                 <div className='description--container'>

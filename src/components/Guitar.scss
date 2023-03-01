@@ -1,5 +1,11 @@
 @import '../sass/variables';
 
+.guitar--container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
 .inscription--main {
     background-color: $background-guitar;
     height: 100%;
@@ -11,8 +17,9 @@
 
 .inscription--guitar__l {
     z-index: 1;
-    width: 45%;
+    width: 6em;
     position: relative;
+    top: 10px;
     animation-name: open_l;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -21,7 +28,8 @@
 .inscription--guitar__r {
     z-index: 1;
     position: relative;
-    width: 45%;
+    top: 10px;
+    width: 6em;
     animation-name: open_r;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -41,40 +49,40 @@
 
 @keyframes open_l {
     from {
-        right: 0%;
+        left: 41.475%;
     }
-
+    
     to {
-        right: 100%;
+        left: 25%;
     }
 }
 
 @keyframes open_r {
     from {
-        right: 0%;
+        left: 41.535%;
     }
-
+    
     to {
-        right: -100%;
+        left: 60%;
     }
 }
 
 @keyframes close_l {
     from {
-        right: 100%;
+        left: 25%;
     }
 
     to {
-        right: 0%;
+        left: 41.475%;
     }
 }
 
 @keyframes close_r {
     from {
-        right: -100%;
+        left: 60%;
     }
 
     to {
-        right: 0%;
+        left: 41.535%;
     }
 }

@@ -25,8 +25,6 @@ const Teachers = () => {
                     url4={item.redes[3].url}
                 />    
             )}
-            <img style={{position: 'relative', top: '-58.5em', right: '-19em', filter: 'drop-shadow(10px -5px 10Apx #444)'}} src={require('../images/uzitítulo-removebg-preview.png')}></img>
-            {/* <img style={{position: 'relative', top: '-64em', right: '18em', filter: 'drop-shadow(10px -5px 10Apx #444)', width: '23em'}} src={require('../images/fer.png')}></img> */}
         </section>
     );
 }
