@@ -6,6 +6,8 @@ import './Formulario.scss';
 
 const Formulario = ({ submitted, setSubmitted,  }) => {
     const [active, setActive] = useState(true);
+    const [required, setRequired] = useState(false);
+    const [requiredSubmit, setRequiredSubmit] = useState(false);
     const [formulario, handleChange, reset] = useFormulario({
         name: '',
         surname: '',
@@ -18,6 +20,36 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
     });
     const [hours] = useHours();
     const [date, setDate] = useState(hours);
+
+    useEffect(() => {
+      const required = (formulario) => {
+        if(formulario.name === '' ||
+            formulario.surname === '' ||
+            formulario.email === '' ||
+            formulario.phone === '' ||
+            formulario.agegroup === ''
+        ) {
+            setRequired(false);
+        } else {
+            setRequired(true);
+        }
+      }
+      required(formulario);
+    }, [formulario])
+
+    useEffect(() => {
+      const requiredSubmit = (formulario) => {
+        if(formulario.city === '' ||
+            formulario.professor === '' ||
+            formulario.hour === ''
+        ) {
+            setRequiredSubmit(false);
+        } else {
+            setRequiredSubmit(true);
+        }
+      }
+      requiredSubmit(formulario);
+    }, [formulario])
 
     const form = useRef();
     const handleSubmit = (e) => {
@@ -58,7 +90,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
                         <option value='Adolescente'>Adolescente</option>
                         <option value='Adulto'>Adulto</option>
                     </select>
-                    <button onClick={() => setActive(!active)} className='inscription--button' type='button'>Siguiente</button>
+                    <button onClick={() => setActive(!active)} disabled={!required} className='inscription--button' type='button'>Siguiente</button>
                 </div>
                 <div className={`inscription--form form--${!active} form--second finish--${submitted}`}>
                     <select name="city" onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
@@ -79,7 +111,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
                             <option key={i.id} value={i.dia + " " + i.hora}>{i.dia}: {i.hora}, lugar: {i.espacio}</option>    
                         )}
                     </select>
-                    <button type="submit" className="inscription--button">Enviar Inscripción</button>
+                    <button type="submit" disabled={!requiredSubmit} className="inscription--button">Enviar Inscripción</button>
                 </div>
             </form>
         </div>
