@@ -49,12 +49,11 @@
 .form--true {
     opacity: 1;
     display: flex;
-    position: relative;
 }
 
 .form--false {
+    display: none;
     opacity: 1;
-    display: flex;
     position: relative;
     right: 1000em;
 }

@@ -13,7 +13,6 @@ const useHours = () => {
           complete: (result) => resolve(result.data),
           error: reject})
       })
-      console.log(parsed);
       setHours(parsed);
     }
   

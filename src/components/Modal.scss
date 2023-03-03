@@ -13,6 +13,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        animation-name: fade-in;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
     }
     &card {
         display: flex;
@@ -27,6 +30,9 @@
         padding: 3em;
         border-radius: 8px;
         box-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+        animation-name: fade-in;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
     }
     &container {
         display: flex;
@@ -35,12 +41,13 @@
         text-align: left;
     }
     &title {
-        color: $black;
+        color: $primary;
+        margin-bottom: 1em;
         font-size: 1.5em;
         text-shadow: 0px 1px 1px $shadow;
     }
     &subtitle {
-        color: $primary;
+        color: $black;
         font-size: 1.2em;
         margin: 0.5em 0;
         text-shadow: 0px 1px 1px $shadow;
@@ -60,5 +67,38 @@
         width: fit-content;
         padding: 0 1em;
         cursor: pointer;
+    }
+}
+
+.hidden--true {
+    opacity: 0;
+}
+
+.hidden--false {
+    opacity: 1;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 780px) {   
+    .modal-- {
+        &overlay {
+            animation: none;
+        }
+        &card {
+            animation: none;
+        }
     }
 }

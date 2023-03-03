@@ -2,7 +2,7 @@ import './Formulario.scss';
 import './Modal.scss';
 import useFormulario from '../hooks/useFormulario';
 import useHours from '../hooks/useHours';
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from './Modal';
 
@@ -10,6 +10,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
     const [active, setActive] = useState(true);
     const [required, setRequired] = useState(false);
     const [requiredSubmit, setRequiredSubmit] = useState(false);
+    const [showModal, setShowModal] = useState(false);
     const [formulario, handleChange, reset] = useFormulario({
         name: '',
         surname: '',
@@ -56,7 +57,6 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
     const form = useRef();
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('first')
         setSubmitted(true);
         emailjs.sendForm('service_tylurvk', 'template_oy0n19c', form.current, 'BWCL7ZUqJm6x267aG')
             .then((result) => {
@@ -64,10 +64,11 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
             }, (error) => {
                 console.log(error.text);
             });
-        reset();
-        setTimeout(() => {
+        setShowModal(true);
+/*         reset(); */
+/*         setTimeout(() => {
             setSubmitted(false);
-        }, 8000);
+        }, 8000); */
     }
     
     useEffect(() => {
@@ -80,31 +81,13 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
 
     return(
         <div className="inscription--container">
-            <Modal estado={true}>
-                <h4 className='modal--title'>Se ha enviado la Inscripción</h4>
-                <div className='modal--container'>
-                    <div>
-                        <h5 className='modal--subtitle'>Datos Personales:</h5>
-                        <p className='modal--text'><b>Nombre:</b> {formulario.name} {formulario.surname}</p>
-                        <p className='modal--text'><b>correo Electrónico:</b> {formulario.email}</p>
-                        <p className='modal--text'><b>Teléfono:</b> {formulario.phone}</p>
-                    </div>
-                    <div>
-                        <h5 className='modal--subtitle'>Datos de Inscripción:</h5>
-                        <p className='modal--text'><b>ciudad:</b> {formulario.city}</p>
-                        <p className='modal--text'><b>profesor:</b> {formulario.professor}</p>
-                        <p className='modal--text'><b>horario y lugar:</b> {formulario.hour}</p>
-                    </div>
-                </div>
-                <p className='modal--text'><span>Importante!</span> descargar la planilla de Inscripción aquí</p>
-                <button className='modal--button'>Descargar planilla</button>
-            </Modal>
+            <Modal formulario={formulario} showModal={showModal} />
             <form onSubmit={handleSubmit} ref={form} style={{display: 'flex'}}>
                 <div className={`inscription--form form--${active} form--first`}>
-                    <input name="name" value={formulario.value} onChange={handleChange} autoFocus type="text" placeholder='Nombre' required className="inscription--input" />
-                    <input name="surname" value={formulario.value} onChange={handleChange} type="text" placeholder='Apellido' required className="inscription--input" />
-                    <input name="email" value={formulario.value} onChange={handleChange} type="text" placeholder='Correo Electrónico' required className="inscription--input" />
-                    <input name="phone" value={formulario.value} onChange={handleChange} type="number" placeholder='Teléfono' required className="inscription--input" />
+                    <input name="name" value={formulario.name} onChange={handleChange} autoFocus type="text" placeholder='Nombre' required className="inscription--input" />
+                    <input name="surname" value={formulario.surname} onChange={handleChange} type="text" placeholder='Apellido' required className="inscription--input" />
+                    <input name="email" value={formulario.email} onChange={handleChange} type="text" placeholder='Correo Electrónico' required className="inscription--input" />
+                    <input name="phone" value={formulario.phone} onChange={handleChange} type="number" placeholder='Teléfono' required className="inscription--input" />
                     <select name="agegroup" onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                         <option hidden label='Grupo Etario' />
                         <option value='Niño'>Niño</option>
