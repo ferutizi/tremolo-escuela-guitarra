@@ -27,6 +27,12 @@
     margin-top: 0.5em;
     font-weight: 600;
     text-shadow: 0px 1px 1px $shadow;
+    transition: all 0.3s;
+    &:disabled {
+        cursor: no-drop;
+        border-color: $shadow;
+        color: $shadow;
+    }
 }
 
 .form--first {

@@ -1,8 +1,10 @@
+import './Formulario.scss';
+import './Modal.scss';
 import useFormulario from '../hooks/useFormulario';
 import useHours from '../hooks/useHours';
 import { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import './Formulario.scss';
+import Modal from './Modal';
 
 const Formulario = ({ submitted, setSubmitted,  }) => {
     const [active, setActive] = useState(true);
@@ -35,7 +37,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
         }
       }
       required(formulario);
-    }, [formulario])
+    }, [formulario]);
 
     useEffect(() => {
       const requiredSubmit = (formulario) => {
@@ -49,7 +51,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
         }
       }
       requiredSubmit(formulario);
-    }, [formulario])
+    }, [formulario]);
 
     const form = useRef();
     const handleSubmit = (e) => {
@@ -70,14 +72,33 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
     
     useEffect(() => {
         if(formulario.city == 'Bahía Blanca') {
-            setDate(hours.filter(item => item.ciudad == 'Bahía Blanca'))
+            setDate(hours.filter(item => item.ciudad == 'Bahía Blanca'));
         } else if(formulario.city == 'Punta Alta') {
-            setDate(hours.filter(item => item.ciudad == 'Punta Alta'))
+            setDate(hours.filter(item => item.ciudad == 'Punta Alta'));
         }
-    }, [formulario.city])
+    }, [formulario.city]);
 
     return(
         <div className="inscription--container">
+            <Modal estado={true}>
+                <h4 className='modal--title'>Se ha enviado la Inscripción</h4>
+                <div className='modal--container'>
+                    <div>
+                        <h5 className='modal--subtitle'>Datos Personales:</h5>
+                        <p className='modal--text'><b>Nombre:</b> {formulario.name} {formulario.surname}</p>
+                        <p className='modal--text'><b>correo Electrónico:</b> {formulario.email}</p>
+                        <p className='modal--text'><b>Teléfono:</b> {formulario.phone}</p>
+                    </div>
+                    <div>
+                        <h5 className='modal--subtitle'>Datos de Inscripción:</h5>
+                        <p className='modal--text'><b>ciudad:</b> {formulario.city}</p>
+                        <p className='modal--text'><b>profesor:</b> {formulario.professor}</p>
+                        <p className='modal--text'><b>horario y lugar:</b> {formulario.hour}</p>
+                    </div>
+                </div>
+                <p className='modal--text'><span>Importante!</span> descargar la planilla de Inscripción aquí</p>
+                <button className='modal--button'>Descargar planilla</button>
+            </Modal>
             <form onSubmit={handleSubmit} ref={form} style={{display: 'flex'}}>
                 <div className={`inscription--form form--${active} form--first`}>
                     <input name="name" value={formulario.value} onChange={handleChange} autoFocus type="text" placeholder='Nombre' required className="inscription--input" />
