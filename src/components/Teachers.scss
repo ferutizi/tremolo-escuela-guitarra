@@ -37,11 +37,18 @@
         height: 100%;
         object-fit: cover;
     }
-    &selfie {
+    &uziel {
         width: 100%;
         position: absolute;
         bottom: 0;
         right: 0;
+        filter: drop-shadow(10px -5px 10px $shadow);
+    }
+    &fernando {
+        width: 76%;
+        position: absolute;
+        bottom: 0;
+        right: 4em;
         filter: drop-shadow(10px -5px 10px $shadow);
     }
 }
@@ -116,14 +123,19 @@
     .description--container {
         width: 90%;
     }
+    .description--text {
+        text-align: left;
+    }
 } 
 
 @media (max-width: 560px) {
     .description--title {
         font-size: 1.8em;
+        text-align: center;
     }
     .description--subtitle {
         font-size: 1.5em;
+        text-align: left;
     }
     .teacher--selfie {
         width: 90%;

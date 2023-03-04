@@ -15,6 +15,7 @@ const Teachers = () => {
                     text1={item.text1}
                     text2={item.text2}
                     text3={item.text3}
+                    photo={item.photo}
                     red1={item.redes[0].name}
                     url1={item.redes[0].url}
                     red2={item.redes[1].name}

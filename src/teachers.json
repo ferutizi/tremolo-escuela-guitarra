@@ -2,7 +2,8 @@
     {
         "id": 1,
         "name": "Uziel Leonel Acuña Martínez ",
-        "image": "blue_c.jpg",
+        "image": "violet_c.jpg",
+        "photo": "uziel",
         "specialization": "Artista",
         "text1": "Músico, compositor y docente. Luego de 11 años de experiencia en la docencia fundó Trémolo Escuela de Guitarra.",
         "text2": "Estudiante del Profesorado de Guitarra en el Conservatorio de Música de Bahía Blanca.",
@@ -33,7 +34,8 @@
     {
         "id": 2,
         "name": "Fernando Utizi",
-        "image": "violet_c.jpg",
+        "image": "blue_c.jpg",
+        "photo": "fernando",
         "specialization": "Técnica y composición",
         "text1": "Es docente con más de 5 años de experiencia y ha dirigido conjuntos intrumentales.",
         "text2": "Compositor y productor musical. Lanzó su álbum Éxodo (2022) bajo el nombre de Semitono.",

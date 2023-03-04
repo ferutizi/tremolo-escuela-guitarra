@@ -3,6 +3,7 @@ import './Teachers.scss';
 const TeacherCard = ({ 
     name, 
     img, 
+    photo,
     specialization, 
     text1,
     text2,
@@ -21,7 +22,7 @@ const TeacherCard = ({
         <article className="teacher--card">
             <div className="teacher--card__img" style={{position: 'relative'}}>
                 <img src={require(`../images/${img}`)} className="teacher--img" />
-                <img className="teacher--selfie" src={require('../images/uzitítulo-removebg-preview.png')} />
+                <img className={`teacher--${photo}`} src={require(`../images/${photo}.png`)} />
             </div>
             <div className="teacher--card__description description">
                 <div className='description--container'>
