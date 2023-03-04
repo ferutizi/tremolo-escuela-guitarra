@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tremolo-escuela-guitarra/static/css/main.240763aa.css",
+    "main.js": "/tremolo-escuela-guitarra/static/js/main.f0cf8667.js",
+    "static/js/787.85d80a50.chunk.js": "/tremolo-escuela-guitarra/static/js/787.85d80a50.chunk.js",
+    "static/media/uziel.png": "/tremolo-escuela-guitarra/static/media/uziel.30b065bb951061f1bf46.png",
+    "static/media/fernando.png": "/tremolo-escuela-guitarra/static/media/fernando.bb670f2071d6c954856f.png",
+    "static/media/main_c.jpg": "/tremolo-escuela-guitarra/static/media/main_c.522b67251158b7e8416c.jpg",
+    "static/media/red_c.jpg": "/tremolo-escuela-guitarra/static/media/red_c.ddfe794c60952a247f12.jpg",
+    "static/media/blue_c.jpg": "/tremolo-escuela-guitarra/static/media/blue_c.f30da40bca8094e90489.jpg",
+    "static/media/violet_c.jpg": "/tremolo-escuela-guitarra/static/media/violet_c.41047799eae0700a3a77.jpg",
+    "static/media/guitar_l_c.png": "/tremolo-escuela-guitarra/static/media/guitar_l_c.1cc87d9dc6f2fc309320.png",
+    "static/media/logo_c.png": "/tremolo-escuela-guitarra/static/media/logo_c.be4be8fe28828d45b290.png",
+    "static/media/guitar_r_c.png": "/tremolo-escuela-guitarra/static/media/guitar_r_c.0418061008b893b021c7.png",
+    "static/media/guitar_c.jpg": "/tremolo-escuela-guitarra/static/media/guitar_c.ade5ca8a42da9b11d9d1.jpg",
+    "index.html": "/tremolo-escuela-guitarra/index.html",
+    "main.240763aa.css.map": "/tremolo-escuela-guitarra/static/css/main.240763aa.css.map",
+    "main.f0cf8667.js.map": "/tremolo-escuela-guitarra/static/js/main.f0cf8667.js.map",
+    "787.85d80a50.chunk.js.map": "/tremolo-escuela-guitarra/static/js/787.85d80a50.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.240763aa.css",
+    "static/js/main.f0cf8667.js"
+  ]
+}
