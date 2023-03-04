@@ -9,3 +9,11 @@
 .subtitle {
     @include subtitle;
 }
+
+@media (max-width: 1024px) {
+    .mainstay--section {
+        background-image: url(../images/red_c.jpg);
+        background-repeat: no-repeat;
+        background-position: 100% 10%;
+    }
+}

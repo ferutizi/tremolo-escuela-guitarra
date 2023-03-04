@@ -157,10 +157,12 @@
 @media (max-width: 780px) {   
     .inscription--guitar__l {
         animation: none;
-        display: none;
+        right: -10em;
+        filter: opacity(0.2);
     }
     .inscription--guitar__r {
         animation: none;
-        display: none;
+        left: 10em;
+        filter: opacity(0.2);
     }
 }
