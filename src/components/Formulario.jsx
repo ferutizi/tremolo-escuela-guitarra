@@ -65,20 +65,24 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
                 console.log(error.text);
             });
         setShowModal(true);
-/*         reset(); */
-/*         setTimeout(() => {
-            setSubmitted(false);
-        }, 8000); */
+    }
+    console.log(formulario)
+
+    const handleFilter = () => {
+        let newArr = hours;
+        if(formulario.city == 'Bahía Blanca') {
+            newArr = hours.filter(item => item.ciudad == 'Bahía Blanca');
+        } else if(formulario.city == 'Punta Alta') {
+            newArr = hours.filter(item => item.ciudad == 'Punta Alta');
+        }
+        if(formulario.professor == 'Fernando Utizi') {
+            newArr = newArr.filter(item => item.profesor == 'Fernando Utizi');
+        } else if (formulario.professor == 'Uziel Leonel Acuña Martínez') {
+            newArr = newArr.filter(item => item.profesor == 'Uziel Leonel Acuña Martínez');
+        }
+        setDate(newArr);
     }
     
-    useEffect(() => {
-        if(formulario.city == 'Bahía Blanca') {
-            setDate(hours.filter(item => item.ciudad == 'Bahía Blanca'));
-        } else if(formulario.city == 'Punta Alta') {
-            setDate(hours.filter(item => item.ciudad == 'Punta Alta'));
-        }
-    }, [formulario.city]);
-
     return(
         <div className="inscription--container">
             <Modal formulario={formulario} showModal={showModal} />
@@ -108,7 +112,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
                         <option value='Uziel Leonel Acuña Martínez'>Uziel Leonel Acuña Martínez</option>
                         <option value='Fernando Utizi'>Fernando Utizi</option>
                     </select>
-                    <select name="hour" onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
+                    <select name="hour" onClick={handleFilter} onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                         <option hidden label='Horario' />
                         <option value='a definir'>A definir con el profesor</option>
                         {date.map(i => 
