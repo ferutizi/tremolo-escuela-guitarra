@@ -82,7 +82,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
         }
         setDate(newArr);
     }
-    
+
     return(
         <div className="inscription--container">
             <Modal formulario={formulario} showModal={showModal} />
@@ -105,6 +105,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
                         <option hidden label='Ciudad' />
                         <option value='Bahía Blanca'>Bahía Blanca</option>
                         <option value='Punta Alta'>Punta Alta</option>
+                        <option value='Punta Alta'>Online</option>
                     </select>
                     <select name="professor" onChange={handleChange} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                         <option hidden label='Profesor de preferencia' />
