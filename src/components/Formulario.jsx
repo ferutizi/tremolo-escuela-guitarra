@@ -11,7 +11,7 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
     const [required, setRequired] = useState(false);
     const [requiredSubmit, setRequiredSubmit] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const [formulario, handleChange, reset] = useFormulario({
+    const [formulario, handleChange] = useFormulario({
         name: '',
         surname: '',
         email: '',
@@ -69,10 +69,8 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
 
     const handleFilter = () => {
         let newArr = hours;
-        if(formulario.city == 'Bahía Blanca') {
+        if(formulario.city) {
             newArr = hours.filter(item => item.ciudad == formulario.city);
-        } else if(formulario.city == 'Punta Alta') {
-            newArr = hours.filter(item => item.ciudad == 'Punta Alta');
         }
         if(formulario.professor == 'Fernando Utizi') {
             newArr = newArr.filter(item => item.profesor == 'Fernando Utizi');
