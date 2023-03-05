@@ -66,20 +66,11 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
             });
         setShowModal(true);
     }
-    console.log(formulario)
 
     const handleFilter = () => {
         let newArr = hours;
-        if(formulario.city == 'Bahía Blanca') {
-            newArr = hours.filter(item => item.ciudad == 'Bahía Blanca');
-        } else if(formulario.city == 'Punta Alta') {
-            newArr = hours.filter(item => item.ciudad == 'Punta Alta');
-        }
-        if(formulario.professor == 'Fernando Utizi') {
-            newArr = newArr.filter(item => item.profesor == 'Fernando Utizi');
-        } else if (formulario.professor == 'Uziel Leonel Acuña Martínez') {
-            newArr = newArr.filter(item => item.profesor == 'Uziel Leonel Acuña Martínez');
-        }
+        newArr = hours.filter(item => item.ciudad == formulario.city);
+        newArr = newArr.filter(item => item.profesor == formulario.professor);
         setDate(newArr);
     }
 
