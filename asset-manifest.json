@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tremolo-escuela-guitarra/static/css/main.240763aa.css",
-    "main.js": "/tremolo-escuela-guitarra/static/js/main.f0cf8667.js",
+    "main.js": "/tremolo-escuela-guitarra/static/js/main.85929335.js",
     "static/js/787.85d80a50.chunk.js": "/tremolo-escuela-guitarra/static/js/787.85d80a50.chunk.js",
     "static/media/uziel.png": "/tremolo-escuela-guitarra/static/media/uziel.30b065bb951061f1bf46.png",
     "static/media/fernando.png": "/tremolo-escuela-guitarra/static/media/fernando.bb670f2071d6c954856f.png",
@@ -15,11 +15,11 @@
     "static/media/guitar_c.jpg": "/tremolo-escuela-guitarra/static/media/guitar_c.ade5ca8a42da9b11d9d1.jpg",
     "index.html": "/tremolo-escuela-guitarra/index.html",
     "main.240763aa.css.map": "/tremolo-escuela-guitarra/static/css/main.240763aa.css.map",
-    "main.f0cf8667.js.map": "/tremolo-escuela-guitarra/static/js/main.f0cf8667.js.map",
+    "main.85929335.js.map": "/tremolo-escuela-guitarra/static/js/main.85929335.js.map",
     "787.85d80a50.chunk.js.map": "/tremolo-escuela-guitarra/static/js/787.85d80a50.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.240763aa.css",
-    "static/js/main.f0cf8667.js"
+    "static/js/main.85929335.js"
   ]
 }
