@@ -1,6 +1,6 @@
 # Tremolo escuela de guitarra
 
-Página web oficial de Trémolo Escuela de Guitarra. Podes visitarla [ACA](https://ferutizi.github.io/)
+Página web oficial de Trémolo Escuela de Guitarra. Podes visitarla [ACA](https://tremoloescuela.com)
 
 ## Tecnologias usadas
 
