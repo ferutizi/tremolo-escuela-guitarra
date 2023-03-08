@@ -70,12 +70,12 @@ const Formulario = ({ submitted, setSubmitted,  }) => {
     const handleFilter = () => {
         let newArr = hours;
         if(formulario.city) {
-            newArr = hours.filter(item => item.ciudad == formulario.city);
+            newArr = hours.filter(item => item.ciudad === formulario.city);
         }
-        if(formulario.professor == 'Fernando Utizi') {
-            newArr = newArr.filter(item => item.profesor == 'Fernando Utizi');
-        } else if (formulario.professor == 'Uziel Leonel Acuña Martínez') {
-            newArr = newArr.filter(item => item.profesor == 'Uziel Leonel Acuña Martínez');
+        if(formulario.professor === 'Fernando Utizi') {
+            newArr = newArr.filter(item => item.profesor === 'Fernando Utizi');
+        } else if (formulario.professor === 'Uziel Leonel Acuña Martínez') {
+            newArr = newArr.filter(item => item.profesor === 'Uziel Leonel Acuña Martínez');
         }
         setDate(newArr);
     }

@@ -11,6 +11,7 @@ const Ubication = () => {
                 ubications.map(item =>
                     <article key={item.id} className='location--card'>
                         <iframe 
+                            title='mapa de la ubicación'
                             className='location--map'
                             src={preLocation + item.map}
                             width={mapWidth}

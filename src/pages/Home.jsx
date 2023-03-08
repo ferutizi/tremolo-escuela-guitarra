@@ -6,7 +6,7 @@ const Home = () => {
     return(
       <>
         <div className='background--image'></div>
-        <img src={require('../images/logo_c.png')} className='background--logo'></img>
+        <img src={require('../images/logo_c.png')} className='background--logo' alt='logo tremolo escuela de guitarra'></img>
         <div className='separate'></div>
         <Mainstay />
         <div style={{height: '2em', backgroundImage: 'linear-gradient(#fff7ef 30%, #fef2e1'}}></div>

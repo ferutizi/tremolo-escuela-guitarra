@@ -36,17 +36,17 @@ const TeacherCard = ({
                         <p className="description--text">{text3}</p>
                     </div>
                     <div className="description--icons">
-                        <a href={url1} target="_blank">
-                            <img src={require(`../images/icons/${red1}_c.png`)} className="description--icon" />
+                        <a href={url1} target="_blank" rel="noreferrer">
+                            <img src={require(`../images/icons/${red1}_c.png`)} alt={red1} className="description--icon" />
                         </a>
-                        <a href={url2} target="_blank">
-                            <img src={require(`../images/icons/${red2}_c.png`)} className="description--icon" />
+                        <a href={url2} target="_blank" rel="noreferrer">
+                            <img src={require(`../images/icons/${red2}_c.png`)} alt={red2} className="description--icon" />
                         </a>
-                        <a href={url3} target="_blank">
-                            <img src={require(`../images/icons/${red3}_c.png`)} className="description--icon" />
+                        <a href={url3} target="_blank" rel="noreferrer">
+                            <img src={require(`../images/icons/${red3}_c.png`)} alt={red3} className="description--icon" />
                         </a>
-                        <a href={url4} target="_blank">
-                            <img src={require(`../images/icons/${red4}_c.png`)} className="description--icon" />
+                        <a href={url4} target="_blank" rel="noreferrer">
+                            <img src={require(`../images/icons/${red4}_c.png`)} alt={red4} className="description--icon" />
                         </a>
                     </div>
                 </div>
