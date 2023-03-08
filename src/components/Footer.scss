@@ -1,7 +1,7 @@
 @import '../sass/variables';
 
-.nav {
-    background-color: #fff;
+.footer {
+    background-color: $primary;
     height: 3em;
     display: flex;
     justify-content: center;
@@ -16,11 +16,30 @@
         font-family: 'Barlow Condensed', sans-serif;
         font-size: 1.5em;
         font-weight: 600;
-        color: $black;
+        color: white;
         text-decoration: none;
         cursor: pointer;
         &:hover {
-           color: $primary;
+           color: $black;
+        }
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin: 0 5em;
+    &--text {
+        text-align: center;
+        margin: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    .copyright {
+        margin: 0 2em;
+        &--text {
+            font-size: 0.8em;
         }
     }
 }

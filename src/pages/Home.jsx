@@ -1,4 +1,5 @@
 import AboutUs from '../components/AboutUs';
+import Footer from '../components/Footer';
 import Mainstay from '../components/Mainstay';
 import Teachers from '../components/Teachers';
 
@@ -13,6 +14,7 @@ const Home = () => {
         <AboutUs />
         <div style={{height: '2em', backgroundImage: 'linear-gradient(#fef2e1 30%, #f7f8fc'}}></div>
         <Teachers />
+        <Footer />
       </>
     );
 }
