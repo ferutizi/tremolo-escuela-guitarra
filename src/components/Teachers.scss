@@ -16,7 +16,7 @@
     width: 83%;
     max-width: 70rem;
     background-color: white;
-    justify-content: start;
+    justify-content: flex-start;
     border-radius: 0.5em;
     box-shadow: 3px 4px 6px $shadow;
     &:nth-child(even) {
