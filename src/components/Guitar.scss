@@ -1,9 +1,17 @@
 @import '../sass/variables';
 
+
 .guitar--container {
     position: relative;
     width: 100%;
-    height: calc(100vh - 3em);
+    height: 100%;
+    min-height: calc(100vh - 3em);
+}
+
+.guitar--reference {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .inscription--main {
@@ -19,7 +27,6 @@
     z-index: 1;
     width: 5.92em;
     position: relative;
-    top: -1em;
     animation-name: open_l;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -28,7 +35,6 @@
 .inscription--guitar__r {
     z-index: 1;
     position: relative;
-    top: -1em;
     width: 5.92em;
     animation-name: open_r;
     animation-duration: 3s;
@@ -49,120 +55,99 @@
 
 @keyframes open_l {
     from {
-        left: 41.515%;
+        left: 0;
     }
     
     to {
-        left: 26%;
+        left: -20em;
     }
 }
 
 @keyframes open_r {
     from {
-        left: 41.485%;
+        left: 0;
     }
     
     to {
-        left: 60%;
+        left: 20em;
     }
 }
 
 @keyframes close_l {
     from {
-        left: 26%;
+        left: -20em;
     }
 
     to {
-        left: 41.515%;
+        left: 0;
     }
 }
 
 @keyframes close_r {
     from {
-        left: 60%;
+        left: 20em;
     }
 
     to {
-        left: 41.485%;
+        left: 0;
     }
 }
 
-// MEDIA QUERIE ANIMATIONS
+//ANIMATIONS MOVILE
 
-@media (max-width: 1310px) {
+@media (max-width: 860px) {
     @keyframes open_l {
         from {
-            left: 41.515%;
+            left: 0;
         }
         
         to {
-            left: 22%;
+            left: -10em;
         }
     }
-    @keyframes close_l {
-        from {
-            left: 22%;
-        }
     
-        to {
-            left: 41.515%;
-        }
-    }
-}
-
-@media (max-width: 1100px) {
-    @keyframes open_l {
+    @keyframes open_r {
         from {
-            left: 41.515%;
+            left: 0;
         }
         
         to {
-            left: 20%;
+            left: 10em;
         }
     }
+    
     @keyframes close_l {
         from {
-            left: 20%;
+            left: -10em;
         }
     
         to {
-            left: 41.515%;
+            left: 0;
+        }
+    }
+    
+    @keyframes close_r {
+        from {
+            left: 10em;
+        }
+    
+        to {
+            left: 0;
         }
     }
 }
 
-@media (max-width: 950px) {
-    @keyframes open_l {
-        from {
-            left: 41.515%;
-        }
-        
-        to {
-            left: 16%;
-        }
-    }
-    @keyframes close_l {
-        from {
-            left: 16%;
-        }
-    
-        to {
-            left: 41.515%;
-        }
-    }
-}
+//NO ANIMATIONS
 
-// MEDIA NO-ANIMATION
-
-@media (max-width: 780px) {   
+@media (max-width: 510px) {
     .inscription--guitar__l {
         animation: none;
-        right: -10em;
+        right: 0;
         filter: opacity(0.2);
     }
     .inscription--guitar__r {
         animation: none;
-        left: 10em;
+        left: 0;
         filter: opacity(0.2);
     }
 }

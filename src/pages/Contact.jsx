@@ -4,7 +4,7 @@ const Contact = () => {
 
 
     return(
-        <section className="location--container">
+        <section className="location--page">
             <Ubication />
         </section>
     );

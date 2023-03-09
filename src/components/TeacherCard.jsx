@@ -21,8 +21,8 @@ const TeacherCard = ({
     return(
         <article className="teacher--card">
             <div className="teacher--card__img" style={{position: 'relative'}}>
-                <img src={require(`../images/${img}`)} className="teacher--img" />
-                <img className={`teacher--${photo}`} src={require(`../images/${photo}.png`)} />
+                <img src={require(`../images/${img}`)} className="teacher--img" alt='fondo notas musicales' />
+                <img className={`teacher--${photo}`} src={require(`../images/${photo}.png`)} alt={`profesor ${name}`} />
             </div>
             <div className="teacher--card__description description">
                 <div className='description--container'>

@@ -6,7 +6,7 @@ const Ubication = () => {
     const mapWidth = 360;
     const mapHeight = 290;
     return(
-        <>
+        <div className='location--container'>
             {
                 ubications.map(item =>
                     <article key={item.id} className='location--card'>
@@ -27,7 +27,7 @@ const Ubication = () => {
                     </article>
                 )
             }
-        </>
+        </div>
     );
 }
 
