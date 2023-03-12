@@ -9,7 +9,7 @@ const AboutUs = () => {
                 <h2 className='subtitle' style={{paddingTop: '0'}}>Escuela de&nbsp;<span>Guitarra</span></h2>
             </div>
             <div className='about--container'>
-                <div>
+                <div className='about--img__container'>
                     <img className='about--img' src={require('../images/guitar_c.jpg')} alt='guitarra' />
                 </div>
                 <div className='about--description'>
