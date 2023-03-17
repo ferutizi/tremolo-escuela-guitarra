@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const useFormulario = (inicial, validateForm) => {
     const [formulario, setFormulario] = useState(inicial);
@@ -8,13 +8,16 @@ const useFormulario = (inicial, validateForm) => {
         setFormulario({
           ...formulario,
           [e.target.name]: e.target.value,
-        })
+        });
     }
 
-    const handleBlur = (e) => {
-        handleChange(e);
+    useEffect(() => {
         setErrors(validateForm(formulario));
-    }
+      }, [formulario]);
+    
+     const handleBlur = () => {
+        setErrors(validateForm(formulario));
+    } 
 
     const reset = () => {
         setFormulario(inicial)

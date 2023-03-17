@@ -32,6 +32,14 @@ const validateForm = (formulario) => {
         errors.email = '*Debe ingresar un email válido'
     } else if(!formulario.phone.trim()) {
         errors.phone = '*Este campo es requerido';
+    } else if(!formulario.agegroup.trim()) {
+        errors.agegroup = '*Este campo es requerido';
+    } else if(!formulario.city.trim()) {
+        errors.city = '*Este campo es requerido';
+    } else if(!formulario.professor.trim()) {
+        errors.professor = '*Este campo es requerido';
+    } else if(!formulario.hour.trim()) {
+        errors.hour = '*Este campo es requerido';
     }
     return errors;
 }
@@ -144,34 +152,46 @@ const Formulario = ({ submitted, setSubmitted }) => {
                         onBlur={handleBlur}
                         errors={errors.phone}
                     />
+                    <div>
                     <select name="agegroup" onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                         <option hidden label='Grupo Etario' />
                         <option value='Niño'>Niño</option>
                         <option value='Adolescente'>Adolescente</option>
                         <option value='Adulto'>Adulto</option>
                     </select>
+                    {errors.agegroup && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.agegroup}</p>}
+                    </div>
                     <button onClick={() => setActive(!active)} disabled={!required} className='inscription--button' type='button'>Siguiente</button>
                 </div>
                 <div className={`inscription--form form--${!active} form--second finish--${submitted}`}>
-                    <select name="city" onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
-                        <option hidden label='Ciudad' />
-                        <option value='Bahía Blanca'>Bahía Blanca</option>
-                        <option value='Punta Alta'>Punta Alta</option>
-                        <option value='Online'>Online</option>
-                    </select>
-                    <select name="professor" onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
-                        <option hidden label='Profesor de preferencia' />
-                        <option value='sin preferencia'>Sin preferencia</option>
-                        <option value='Uziel Leonel Acuña Martínez'>Uziel Leonel Acuña Martínez</option>
-                        <option value='Fernando Utizi'>Fernando Utizi</option>
-                    </select>
-                    <select name="hour" onClick={handleFilter} onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
-                        <option hidden label='Horario' />
-                        <option value='a definir'>A definir con el profesor</option>
-                        {date.map(i => 
-                            <option key={i.id} value={i.dia + " " + i.hora}>{i.dia}: {i.hora}, lugar: {i.espacio}</option>    
-                        )}
-                    </select>
+                    <div>
+                        <select name="city" onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
+                            <option hidden label='Ciudad' />
+                            <option value='Bahía Blanca'>Bahía Blanca</option>
+                            <option value='Punta Alta'>Punta Alta</option>
+                            <option value='Online'>Online</option>
+                        </select>
+                        {errors.city && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.city}</p>}
+                    </div>
+                    <div>
+                        <select name="professor" onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
+                            <option hidden label='Profesor de preferencia' />
+                            <option value='sin preferencia'>Sin preferencia</option>
+                            <option value='Uziel Leonel Acuña Martínez'>Uziel Leonel Acuña Martínez</option>
+                            <option value='Fernando Utizi'>Fernando Utizi</option>
+                        </select>
+                        {errors.professor && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.professor}</p>}
+                    </div>
+                    <div>
+                        <select name="hour" onClick={handleFilter} onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
+                            <option hidden label='Horario' />
+                            <option value='a definir'>A definir con el profesor</option>
+                            {date.map(i => 
+                                <option key={i.id} value={i.dia + " " + i.hora}>{i.dia}: {i.hora}, lugar: {i.espacio}</option>    
+                            )}
+                        </select>
+                        {errors.hour && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.hour}</p>}
+                    </div>
                     <button type="submit" disabled={!requiredSubmit} className="inscription--button">Enviar Inscripción</button>
                 </div>
             </form>
