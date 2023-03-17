@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-const useFormulario = (inicial = '') => {
+const useFormulario = (inicial, validateForm) => {
     const [formulario, setFormulario] = useState(inicial);
+    const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
         setFormulario({
@@ -10,12 +11,17 @@ const useFormulario = (inicial = '') => {
         })
     }
 
+    const handleBlur = (e) => {
+        handleChange(e);
+        setErrors(validateForm(formulario));
+    }
+
     const reset = () => {
         setFormulario(inicial)
     }
 
     return(
-        [formulario, handleChange, reset]
+        [formulario, handleChange, handleBlur, errors, reset]
     );
 }
 
