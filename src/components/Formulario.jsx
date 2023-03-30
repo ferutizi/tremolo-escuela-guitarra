@@ -111,6 +111,14 @@ const Formulario = ({ submitted, setSubmitted }) => {
         setDate(newArr);
     }
 
+    const handleFilterHour = () => {
+        let newArr = date;
+        if(formulario.day) {
+            newArr = date.filter(item => item.dia === formulario.day);
+        }
+        setDate(newArr);
+    }
+
     const memoizedDays = useMemo(() => {
         const days = {};
         return date.map((item) => {
@@ -198,22 +206,19 @@ const Formulario = ({ submitted, setSubmitted }) => {
                         {errors.professor && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.professor}</p>}
                     </div>
                     <div>
-                        <select name="day" onClick={handleFilter} onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
+                        <select disabled={formulario.city === '' || formulario.professor === ''} name="day" onClick={handleFilter} onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                             <option hidden label='Día' />
                             <option value='a definir'>A definir con el profesor</option>
                             {memoizedDays}
-{/*                             {date.map(i => 
-                                <option key={i.id} value={i.dia + " " + i.hora}>{i.dia}</option>    
-                            )} */}
                         </select>
                         {errors.hour && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.hour}</p>}
                     </div>
                     <div>
-                        <select name="hour" onClick={handleFilter} onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
+                        <select disabled={formulario.day === '' || formulario.city === '' || formulario.professor === ''} name="hour" onClick={handleFilterHour} onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                             <option hidden label='Horario' />
                             <option value='a definir'>A definir con el profesor</option>
                             {date.map(i => 
-                                <option key={i.id} value={i.dia + " " + i.hora}>{i.dia}: {i.hora}{/* , lugar: {i.espacio} */}</option>    
+                                <option key={i.id} value={i.dia + " " + i.hora}>{i.hora} - {i.espacio}</option>    
                             )}
                         </select>
                         {errors.hour && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.hour}</p>}
