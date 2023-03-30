@@ -2,7 +2,7 @@ import './Formulario.scss';
 import './Modal.scss';
 import useFormulario from '../hooks/useFormulario';
 import useHours from '../hooks/useHours';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from './Modal';
 import Input from './Input';
@@ -15,6 +15,7 @@ const inicial = {
     agegroup: '',
     city: '',
     professor: '',
+    day: '',
     hour: ''
 }
 
@@ -110,6 +111,20 @@ const Formulario = ({ submitted, setSubmitted }) => {
         setDate(newArr);
     }
 
+    const memoizedDays = useMemo(() => {
+        const days = {};
+        return date.map((item) => {
+          if (!days[item.dia]) {
+            days[item.dia] = true;
+            return (
+                <option key={item.id} value={item.dia}>{item.dia}</option>
+            );
+          } else {
+            return;
+          }
+        });
+      }, [date]);
+
     return(
         <div className="inscription--container">
             <Modal formulario={formulario} showModal={showModal} />
@@ -183,11 +198,22 @@ const Formulario = ({ submitted, setSubmitted }) => {
                         {errors.professor && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.professor}</p>}
                     </div>
                     <div>
+                        <select name="day" onClick={handleFilter} onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
+                            <option hidden label='Día' />
+                            <option value='a definir'>A definir con el profesor</option>
+                            {memoizedDays}
+{/*                             {date.map(i => 
+                                <option key={i.id} value={i.dia + " " + i.hora}>{i.dia}</option>    
+                            )} */}
+                        </select>
+                        {errors.hour && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.hour}</p>}
+                    </div>
+                    <div>
                         <select name="hour" onClick={handleFilter} onChange={handleChange} onBlur={handleBlur} className='inscription--input' required defaultValue={false} style={{color: '#777'}}>
                             <option hidden label='Horario' />
                             <option value='a definir'>A definir con el profesor</option>
                             {date.map(i => 
-                                <option key={i.id} value={i.dia + " " + i.hora}>{i.dia}: {i.hora}, lugar: {i.espacio}</option>    
+                                <option key={i.id} value={i.dia + " " + i.hora}>{i.dia}: {i.hora}{/* , lugar: {i.espacio} */}</option>    
                             )}
                         </select>
                         {errors.hour && <p style={{margin: '0', position: 'absolute', color: '#e73f46'}}>{errors.hour}</p>}
