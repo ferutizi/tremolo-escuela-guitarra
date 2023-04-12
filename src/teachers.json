@@ -52,14 +52,14 @@
                 "url": "https://www.instagram.com/fernandoutizi/"
             },
             {
-                "id": 3,
-                "name": "facebook",
-                "url": "https://www.facebook.com/fer.utizi/"
-            },
-            {
                 "id": 4,
                 "name": "twitch",
                 "url": "https://www.twitch.tv/semitonoestendencia"
+            },
+            {
+                "id": 3,
+                "name": "youtube",
+                "url": "https://www.youtube.com/@semitono2960"
             }
         ]
     }
