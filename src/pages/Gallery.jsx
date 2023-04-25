@@ -1,8 +1,8 @@
 const Gallery = () => {
-    return(
-        <>
-        </>
-    );
+  return (
+    <>
+    </>
+  )
 }
 
-export default Gallery;
+export default Gallery

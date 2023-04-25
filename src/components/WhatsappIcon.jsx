@@ -1,11 +1,11 @@
-import './WhatsappIcon.scss';
+import './WhatsappIcon.scss'
 
 const WhatsappIcon = () => {
-    return(
-        <a href="https://api.whatsapp.com/send?phone=+5492932543010&text=Hola, me quiero inscribir a clases de guitarra" target="_blank" rel="noreferrer" >
-            <img src={require('../images/wp_c.png')} alt="icono de whatsapp para contacto" className="icon--wp" />
-        </a>
-    );
+  return (
+    <a href='https://api.whatsapp.com/send?phone=+5492932543010&text=Hola, me quiero inscribir a clases de guitarra' target='_blank' rel='noreferrer'>
+      <img src={require('../images/wp_c.png')} alt='icono de whatsapp para contacto' className='icon--wp' />
+    </a>
+  )
 }
 
-export default WhatsappIcon;
+export default WhatsappIcon

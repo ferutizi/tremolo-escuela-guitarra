@@ -1,31 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
 
 const useFormulario = (inicial, validateForm) => {
-    const [formulario, setFormulario] = useState(inicial);
-    const [errors, setErrors] = useState({});
+  const [formulario, setFormulario] = useState(inicial)
+  const [errors, setErrors] = useState({})
 
-    const handleChange = (e) => {
-        setFormulario({
-          ...formulario,
-          [e.target.name]: e.target.value,
-        });
-    }
+  const handleChange = (e) => {
+    setFormulario({
+      ...formulario,
+      [e.target.name]: e.target.value
+    })
+  }
 
-    useEffect(() => {
-        setErrors(validateForm(formulario));
-      }, [formulario]);
-    
-     const handleBlur = () => {
-        setErrors(validateForm(formulario));
-    } 
+  useEffect(() => {
+    setErrors(validateForm(formulario))
+  }, [formulario])
 
-    const reset = () => {
-        setFormulario(inicial)
-    }
+  const handleBlur = () => {
+    setErrors(validateForm(formulario))
+  }
 
-    return(
-        [formulario, handleChange, handleBlur, errors, reset]
-    );
+  const reset = () => {
+    setFormulario(inicial)
+  }
+
+  return (
+    [formulario, handleChange, handleBlur, errors, reset]
+  )
 }
 
-export default useFormulario;
+export default useFormulario
