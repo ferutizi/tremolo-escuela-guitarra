@@ -57,11 +57,11 @@ const Formulario = ({ submitted, setSubmitted }) => {
   useEffect(() => {
     const required = (formulario) => {
       if (formulario.name === '' ||
-            formulario.surname === '' ||
-            formulario.email === '' ||
-            formulario.phone === '' ||
-            formulario.agegroup === '' ||
-            !regexEmail.test(formulario.email.trim())
+        formulario.surname === '' ||
+        formulario.email === '' ||
+        formulario.phone === '' ||
+        formulario.agegroup === '' ||
+        !regexEmail.test(formulario.email.trim())
       ) {
         setRequired(false)
       } else {
@@ -74,8 +74,8 @@ const Formulario = ({ submitted, setSubmitted }) => {
   useEffect(() => {
     const requiredSubmit = (formulario) => {
       if (formulario.city === '' ||
-            formulario.professor === '' ||
-            formulario.hour === ''
+        formulario.professor === '' ||
+        formulario.hour === ''
       ) {
         setRequiredSubmit(false)
       } else {
@@ -201,7 +201,6 @@ const Formulario = ({ submitted, setSubmitted }) => {
               <option hidden label='Profesor de preferencia' />
               <option value='sin preferencia'>Sin preferencia</option>
               <option value='Uziel Leonel Acuña Martínez'>Uziel Leonel Acuña Martínez</option>
-              <option value='Fernando Utizi'>Fernando Utizi</option>
             </select>
             {errors.professor && <p style={{ margin: '0', position: 'absolute', color: '#e73f46' }}>{errors.professor}</p>}
           </div>
