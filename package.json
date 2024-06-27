@@ -26,7 +26,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "./node_modules/standar/eslintrc.json"
     ]
   },
   "browserslist": {
@@ -44,6 +45,7 @@
   "devDependencies": {
     "sass": "^1.58.2",
     "sass-loader": "^13.2.0",
+    "standard": "^17.1.0",
     "webpack": "^5.75.0"
   }
 }
